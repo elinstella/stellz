@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellz</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <title>Stellz Makeup | Premium Beauty Products for All Skin Types</title>
+    <meta name="description" content="Discover Stells' range of high-quality makeup and skincare products designed for all skin types. Shop our bestsellers, from foundations to lipsticks, and glow with confidence.">
+    <meta name="keywords" content="Stells makeup, beauty products, skincare, foundation, lipstick, cruelty-free makeup, makeup for all skin types, vegan beauty products, online makeup store, best makeup products, premium beauty products">
+    <meta name="robots" content="index, follow">
+
+
+
+</head>
+<body>
+    <header class="header" role="banner"> <!-- Detta klargör för hjälpmedel att detta är en banner som vanligtvis innehåller sidans namn eller logotyp. -->
+        <h1>Stellz</h1>
+    </header>
+  
+    <nav class="nav" aria-label="Main Navigation">   <!-- aria-label="Main Navigation" på <nav> för att specificera att detta är huvudnavigeringen. -->
+        <ul class="nav-list" role="menubar">  <!-- role="menubar" på listan (<ul>) för att förklara att den fungerar som en menyrad. -->
+            <li class="nav-item" role="none"><a href="http://127.0.0.1:5500/index.html" role="menuitem">Home</a></li>     <!-- role="menuitem" på varje länk (<a>) för att förtydliga att de är menyalternativ. -->
+            <li class="nav-item" role="none"><a href="http://127.0.0.1:5500/Products.html" role="menuitem">Products</a></li>
+            <li class="nav-item" role="none"><a href="http://127.0.0.1:5500/about-us.html" role="menuitem">About us</a></li>
+        </ul>
+    </nav>
+  
+    <main role="main">
+        <section aria-labelledby="about-stellz">  <!-- aria-labelledby för att koppla rubrikerna (<h2>) till deras respektive sektioner. Detta förbättrar förståelsen för användare som använder skärmläsare. -->
+            <h2 id="about-stellz">At Stellz Cosmetics</h2>
+            <p>We believe that beauty is an expression of individuality. Effective but also safe for your skin.<br>
+                We are committed to sustainability and cruelty-free practices, ensuring that our products are ethically sourced and never tested on animals.<br>        
+            </p>
+        </section>
+
+        <section aria-labelledby="bestsellers">
+            <h2 id="bestsellers"><br>Our bestsellers</h2>
+        </section>
+
+        <div class="image-container">
+            <a href="http://127.0.0.1:5500/Products.html" class="image-link">
+                <img src="2.png"  alt="Pearls beauty product">     <!-- Lade till mer beskrivande alt-attribut för bilderna (t.ex. "Pearls beauty product"), vilket ger viktig information för användare med synnedsättning och hjälpmedel. Alt-texter bör förklara vad bilden visar och dess funktion. -->
+                <p>Pearls <br> 399 sek</p>
+            </a>
+            <a href="http://127.0.0.1:5500/Products.html" class="image-link">
+                <img src="3.png" alt="Zeal it beauty product">
+                <p>Zeal it<br>299 sek</p>
+            </a>
+            <a href="http://127.0.0.1:5500/Products.html" class="image-link">
+                <img src="1.png" alt="Floshy beauty product">
+                <p>Floshy<br>399 sek</p>
+            </a>
+        </div>
+
+        <p class="additional-info">
+            We have more beauties<br>
+            <a href="http://127.0.0.1:5500/Products.html">See all products here</a>
+        </p>
+
+    </main>
+
+    
+    <footer class="site-footer" role="contentinfo">
+        <section class="footer-item" aria-labelledby="contact-info">
+            <h2 id="contact-info" class="visually-hidden">Contact</h2>
+            support@stellz.com <br>
+            +1 (555) 123-4567 <br>
+            Monday - Friday 9:00 AM - 6:00 PM <br>
+            Headquarters 
+        </section>
+
+        <section class="footer-item center" aria-labelledby="address-info">
+            <h2 id="address-info" class="visually-hidden">Address</h2>
+            Stellz Cosmetics Inc. <br>
+            Star Avenue 12 <br>
+            New York, NY 10001, USA <br>
+            Follow Us on Social Media 
+        </section>
+
+        <section class="footer-item" aria-labelledby="follow-us-info">
+            <h2 id="follow-us-info" class="visually-hidden">Follow us</h2>
+            Instagram: @stellzcosmetics <br>
+            facebook.com/stellzcosmetics <br>
+            TikTok: @stellz <br>
+            Collaborations & PR 
+        </section>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,489 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+width: 100%;
+box-sizing: border-box;
+background-color: #ffffff;
+}
+
+header {
+position: relative;
+background-image: url('header.jpg'); 
+background-size: cover; 
+background-position: center; 
+color: white; 
+height: 50vh; /* 50% av viewport-höjd */
+width: 100%; /* Full bredd */
+display: flex;
+align-items: center; 
+justify-content: center; 
+}
+
+h1, h2 {
+position: relative;
+text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+font-size: 3.9em;
+text-shadow: 0px 4px 4px rgba(61, 18, 41, 0.759); /* Skugga på texten */
+}
+
+h2 {
+font-size: 2em;
+}
+
+main {
+padding: 0px; 
+max-width: 1000px; 
+margin: 120px auto; 
+text-align: center;
+}
+
+main h2 {
+color: #762a53; 
+font-size: 2em; 
+margin-bottom: 0px; 
+}
+
+main p {
+color: #333; 
+line-height: 1.6; 
+margin-bottom: 20px; 
+font-size: 1.1em; 
+}
+
+
+/* Navigerings lista */
+.nav {
+background-color: #651040e6;
+width: 100%; 
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+
+}
+
+.nav-list {
+list-style: none;
+margin: 0px;
+padding: 0;
+display: flex;
+justify-content: center; 
+align-items: center;
+height: 60px; 
+}
+
+.nav-item {
+position: relative;
+padding: 0 0px; 
+}
+
+.nav-item a {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 1.2em;
+text-shadow: 0px 1px 1px rgb(0 0 0 / 76%);
+color: rgb(255, 225, 245);
+text-decoration: none;
+padding: 10px 30px;
+display: block;
+transition: color 0.3s ease; 
+}
+
+.nav-item a:hover {
+color: #8a6485; 
+}
+
+.nav-item:not(:last-child)::after {
+content: '';
+position: absolute;
+right: 0;
+top: 50%;
+transform: translateY(-50%); 
+height: 30px;
+width: 1px;
+background-color: white;
+}
+
+.nav-item:nth-child(1),
+.nav-item:nth-child(3) {
+flex-grow: 1; 
+text-align: right; 
+}
+
+.nav-item:nth-child(1) {
+text-align: right; 
+}
+
+.nav-item:nth-child(3) {
+text-align: left; 
+}
+
+
+.artikel-container {
+background-image: url('header.jpg'); 
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-color: #c79c9c;
+border-radius: 70px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 900px;
+margin: 130px auto; 
+padding: 20px;
+}
+
+.artikel-rubrik {
+background-color: #f2cdc9;
+color: #762a53;
+padding: 30px 10px 10px 10px;
+margin: 0;
+border-radius: 70px 70px 0 0;
+text-align: center;
+}
+
+.artikel-text {
+background-color: #ffffff;
+color: #333;
+padding: 30px;
+margin: 0;
+border-radius: 0 0 70px 70px;
+line-height: 1.9;
+text-align: center;
+}
+
+/* Produkter med grid  */
+.image-container {
+display: grid;
+grid-template-columns: repeat(3, 200px); 
+justify-content: center; 
+gap: 180px; 
+margin-top: 60px;
+}
+
+/* Flexbox för att centrera bild och text */
+.image-link {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+text-decoration: none;
+color: #333;
+margin: 0; 
+padding: 0; 
+}
+
+.image-link img {
+width: 300px;
+height: 300px;
+border-radius: 50%;
+object-fit: cover;
+transition: transform 0.3s ease-in-out;
+margin: 0; 
+padding: 0; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.image-link p {
+margin-top: 25px;
+font-size: 16px;
+color: #555;
+text-align: center;
+}
+
+.image-link img:hover {
+transform: scale(1.1);
+}
+
+
+.additional-info {
+text-align: center; /* Centrera texten */
+font-size: 1.1em; /* Justera textstorlek */
+color: #000000; /* Färg på texten */
+margin: 70px auto; /* Avstånd ovanför och centrerar horisontellt */
+background-color: #e4adb366;
+padding: 30px; /* Utrymme runt texten */
+border-radius: 100px; /* Rundade hörn */
+max-width: 250px; /* Maximal bredd på div */
+display: flex;
+flex-direction: column; /* Gör så att innehållet ställer sig vertikalt */
+align-items: center; /* Centrera innehållet vertikalt */
+}
+
+.additional-info a:hover {
+color: #0056b3; /* Färg vid hover */
+text-decoration: underline; /* Understrykning vid hover */
+}
+
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumner */
+    gap: 30px; /* Avstånd mellan produkterna */
+    max-width: 1000px; /* Max bredd för innehållet */
+    margin: 20px auto; /* Centrera på sidan */
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.product {
+    background-color: #ffffff; /* Ljus bakgrundsfärg */
+    border-radius: 15px; /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga */
+    text-align: center; /* Centrera texten */
+    padding: 10px; /* Avstånd runt texten */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation för hover */
+    display: flex; /* Använd flexbox för att centrera innehållet */
+    flex-direction: column; /* Kolumnorientering */
+    align-items: center; /* Centrera innehållet horisontellt */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Lätt uppåtrörelse vid hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Skugga vid hover */
+}
+
+.product img {
+    width: 300px; /* Fast bredd för bilderna */
+    height: 300px; /* Fast höjd för bilderna */
+    border-radius: 10px; /* Rundade hörn på bilder */
+    object-fit: cover; /* Klipp bilden om den är för stor */
+}
+
+.product p {
+    margin-top: 10px; /* Avstånd från bilden */
+    font-size: 1.1em; /* Textstorlek */
+    color: #333; /* Textfärg */
+}
+
+
+.site-footer {
+background-color: #762a53;
+color: #ffffff;
+display: flex; /* Använd flexbox */
+justify-content: space-center; /* Dela upp utrymmet mellan textpartierna */
+padding: 40px; /* Lite utrymme runt texten */
+margin-top: 100px;
+font-size: 0.9em; /* Mindre textstorlek */
+box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Liten skugga över footern */
+}
+
+.footer-item {
+flex: 1; /* Gör så att alla textpartier får lika mycket utrymme */
+text-align: center; /* Centrera texten i varje textparti */
+}
+
+.center {
+text-align: center; /* För att säkerställa att centrerad text är korrekt */
+}
+
+@media (max-width: 1200px) {
+    /* Anpassning för artikel-container */
+    .artikel-container {
+        padding: 20px; 
+        margin: 80px auto; 
+        border-radius: 50px; 
+    }
+
+    .artikel-rubrik {
+        padding: 25px 15px; 
+        border-radius: 50px 50px 0 0; 
+    }
+
+    .artikel-text {
+        padding: 25px; 
+        border-radius: 0 0 50px 50px; 
+        line-height: 1.7; 
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
+        margin-top: 50px; 
+    }
+
+    .image-link img {
+        width: 250px; 
+        height: 250px; 
+    }
+
+    .image-link p {
+        margin-top: 20px; 
+        font-size: 15px; 
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
+        gap: 20px; /* Minskar gapet mellan produkterna */
+        margin-top: 60px; /* Justerat avstånd ovanför */
+    }
+
+    .product img {
+        width: 250px; /* Minskar bildstorleken */
+        height: 250px; /* Justera höjd på bilder */
+    }
+
+    .product p {
+        font-size: 1em; /* Justera textstorleken */
+    }
+}
+
+@media (max-width: 768px) {
+   
+    /* Main */
+    main {
+        padding: 20px; 
+        max-width: 100%; 
+        margin: 80px auto; 
+    }
+
+    main h2 {
+        font-size: 1.5em; 
+    }
+
+    main p {
+        font-size: 1em; 
+    }
+
+    /* Information på första sida  */
+    .additional-info {
+        font-size: 1em;
+        padding: 20px; 
+        max-width: 200px; 
+        margin: 50px auto; 
+        border-radius: 50px; 
+    }
+
+   
+    /* Någonting */
+    .artikel-container {
+        padding: 15px; 
+        margin: 60px auto; 
+        border-radius: 30px; 
+    }
+
+    .artikel-rubrik {
+        padding: 20px 10px; 
+        border-radius: 30px 30px 0 0; 
+    }
+
+    .artikel-text {
+        padding: 20px; 
+        border-radius: 0 0 30px 30px; 
+        line-height: 1.6; 
+    }
+
+    .image-container {
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+        margin-top: 40px; 
+    }
+
+    .image-link img {
+        width: 250px; 
+        height: 250px;
+    }
+
+    .image-link p {
+        margin-top: 15px; 
+        font-size: 14px; 
+    }
+
+
+    /* Product container */
+    .product-container {
+        grid-template-columns: 1fr; /* 1 kolumn */
+        margin-top: 40px; /* Justerat avstånd ovanför */
+    }
+
+    .product img {
+        width: 200px; /* Minskar bildstorleken */
+        height: 200px; /* Justera höjd på bilder */
+    }
+
+    .product p {
+        font-size: 0.9em; /* Minskar textstorleken */
+    }
+
+    /* Footer */
+    .site-footer {
+        flex-direction: column; 
+        padding: 30px; 
+    }
+
+    .footer-item {
+        margin-bottom: 20px; 
+        text-align: center; 
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Anpassning för ännu mindre skärmar, t.ex. mobiltelefoner */
+    .artikel-container {
+        padding: 10px;
+        margin: 30px auto;
+    }
+
+    .artikel-rubrik {
+        padding: 15px 5px;
+        font-size: 1.5em; /* Minska rubrikstorleken */
+    }
+
+    .artikel-text {
+        padding: 15px;
+        font-size: 1em; /* Mindre textstorlek i artikeltext */
+    }
+
+    .image-container {
+        grid-template-columns: 1fr; /* Fortsätter med en kolumn för bilder */
+        gap: 20px; /* Minskar gapet ytterligare */
+    }
+
+    .image-link img {
+        width: 150px; /* Minska bildstorleken för små skärmar */
+        height: 150px;
+    }
+
+    .image-link p {
+        font-size: 12px; /* Mindre textstorlek under bilderna */
+    }
+
+    .additional-info {
+        font-size: 0.9em; /* Ännu mindre textstorlek för små skärmar */
+        padding: 15px; /* Minska padding ytterligare */
+        max-width: 180px; /* Minska bredden ytterligare */
+        margin: 30px auto; /* Minska avstånd ovanför ytterligare */
+        border-radius: 30px; /* Minska radie på hörnen ännu mer */
+    }
+
+    .product-container {
+        padding: 10px; /* Minskar padding på container */
+        margin-top: 20px; /* Mindre avstånd ovanför */
+    }
+
+    .product img {
+        width: 150px; /* Minskar bildstorleken */
+        height: 150px; /* Justera höjd på bilder */
+    }
+
+    .product p {
+        font-size: 0.8em; /* Minskar textstorleken */
+        margin-top: 5px; /* Justerat avstånd från bilden */
+    }
+
+    @media (max-width: 480px) {
+        .site-footer {
+            padding: 20px; /* Ännu mindre padding för små skärmar */
+        }
+    
+        .footer-item {
+            margin-bottom: 15px; /* Minskar avståndet mellan textpartier ytterligare */
+            font-size: 0.9em; /* Anpassar textstorleken för små skärmar */
+        }
+    }
+}
